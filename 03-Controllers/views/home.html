@@ -1,0 +1,18 @@
+<h1>Welcome tho this awesome demo</h1>
+<h2>{{title}}</h2>
+
+<ul>
+	<li ng-repeat="promotion in promotions">
+		<span>Name: {{promotion.name}}</span>
+		<br/>
+		<span>Price: {{promotion.price}}</span>
+	</li>
+</ul>
+
+<span>Name</span>
+<input type="text" ng-model="newpromotion.name"/>
+<br/>
+<span>Price</span>
+<input type="text" ng-model="newpromotion.price"/>
+<br/>
+<button ng-click="add()">Add new Promotion</button>
