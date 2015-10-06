@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="controllers.js"></script>
+
+	<!-- Polymer -->
+	<script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>	
+	<link rel="import" href="bower_components/google-castable-video/google-castable-video.html">
+</head>
+<body ng-app="polymer">
+	<a href="#/">Home</a>
+	<a href="#/products">Products</a>
+	<a href="#/video">Video</a>
+	<div ng-view>
+		<!-- View display -->
+	</div>
+</body>
+</html>
