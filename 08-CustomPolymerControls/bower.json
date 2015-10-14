@@ -1,0 +1,28 @@
+{
+  "name": "08-CustomPolymerControls",
+  "version": "0.1.0",
+  "homepage": "https://github.com/edWAR6/DWI",
+  "authors": [
+    "Eduardo Oviedo Blanco <eduardo.oviedo@gmail.com>"
+  ],
+  "description": "Demostration of custom components",
+  "main": "app.js",
+  "moduleType": [],
+  "keywords": [
+    "polymer",
+    "demo",
+    "practice"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0"
+  }
+}

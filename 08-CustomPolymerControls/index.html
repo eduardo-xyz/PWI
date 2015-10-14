@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World</title>	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.min.js"></script>
+
+	<!-- Polymer dependency -->
+	<script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+	<!-- My demos -->
+	<link rel="import" href="my-components/my-simpleelement.html">
+
+	<!-- My angularJS core -->
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="controllers.js"></script>	
+
+</head>
+<body ng-app="custompolymer">
+	<a href="#/">Home</a>
+	<a href="#/simpleelement">Simple element</a>
+	<div ng-view>
+		<!-- View display -->
+	</div>
+</body>
+</html>
