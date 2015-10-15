@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>	
+</head>
+<body>
+	<canvas id="mycanvas" width="300" height="300">
+		No canvas :(
+	</canvas>
+
+	<script type="text/javascript">
+	var canvas = document.getElementById('mycanvas');
+	var context = canvas.getContext('2d');
+
+	context.fillStyle = "green";
+	context.fillRect(10,10,100,100);
+
+	context.fillStyle = "rgba(0,0,200,0.5)";
+	context.fillRect(35,35,100,100);
+	</script>
+</body>
+</html>
