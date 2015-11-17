@@ -1,0 +1,38 @@
+{
+  "name": "pwi-localdom",
+  "version": "0.0.1",
+  "homepage": "https://github.com/diegocano423/pwi-localdom",
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "polymer"
+  ],
+  "authors": [
+    "Diego Cano"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~1.2.1"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#~1.0.9"
+  },
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "860d230b79c5148881b5d51f28f1becc293dd69d"
+  },
+  "_source": "git://github.com/diegocano423/pwi-localdom.git",
+  "_target": "~0.0.1",
+  "_originalSource": "diegocano423/pwi-localdom",
+  "_direct": true
+}
