@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery UI</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	
+	<style>
+		.bigbox {
+			border: 3px solid gray;
+			width: 800px;
+			height: 400px;
+		}
+		
+		.inner-green {
+			float: left;
+			border: 3px solid green;
+			width: 400px;
+			height: 300px;
+		}
+		
+		.inner-box {
+			float: left;
+			border: 3px solid red;
+			width: 200px;
+			height: 200px;
+		}
+		.animated-elt {
+			width: 200px;
+			border: 3px solid blue;
+			margin: 20px;
+		}
+		.animated-elt.active {
+			width: 400px;
+			border: 3px solid red;
+			background: gray;
+		}
+		.animate {
+			margin: 20px;
+		}
+	</style>
+
+	<script>
+		$(function() {
+			//Draggable
+			$(".inner-box").draggable({ containment: "parent" });
+			//Droppable
+			$("#droppable-box").droppable({
+				drop: function(event, ui){
+					$(this).find("p").html("My Droppable box is in use!");
+				},
+				out: function(event, ui) {
+					$(this).find("p").html("My Droppable box is not in use!");	
+				}
+			});
+			//Accordion
+			$(".accordion").accordion({
+				collapsible: true
+			});
+			//Effect
+			var animateState = true;
+			$(".animate").click(function(){
+				if(animateState) {
+					$(".animated-elt").addClass('active', 500, function(){
+						$(this).html("Hellooooo");
+						$(this).effect('shake', {}, 1000, false);
+					});
+				} else {
+					$(".animated-elt").removeClass('active', 500, function() {
+						$(this).html("Good Bye");
+					});
+					$(".animated-elt").effect('shake', {}, 1000, false);
+				}
+				animateState = !animateState;
+			});
+			//Local Storage
+			if(typeof(Storage) !== "undefined") {
+				var data = [];
+				if(localStorage.getItem("teamList")!=undefined) {
+					// Retrieve data from local storage
+					// Parse data JSON.parse
+					data = JSON.parse(localStorage.getItem("teamList"));
+					
+					for (var i = 0; i <data.length; i++) {
+						$('#teams').append($('<li></li>').html(data[i]));
+					}
+				}
+				console.log('Supported');
+				$('#addToLocal').click(function(){
+					var team = $('#team').val();
+					$('#teams').append($('<li></li>').html(team));
+					data.push(team);
+					// Save elements to localstorage, 
+					// must be stringified before
+					localStorage.setItem("teamList", JSON.stringify(data));
+					$('#team').val('');
+				});
+			} else {
+			    console.log('Not supported!');
+			}
+		});
+	</script>
+
+</head>
+<body>
+	<h1>JQuery UI Examples</h1>
+
+	<h2>Draggable</h2>
+	<div class="draggable bigbox">
+		<p class="inner-box">This is my draggable box</p>
+	</div>
+
+	<hr>
+
+	<h2>Droppable</h2>
+	<div class="droppable bigbox">
+		<p class="inner-box">This is my draggable box</p>
+		<div id="droppable-box" class="inner-green">
+			<p>My Droppable box</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<h2>Accordion</h2>
+	<div class="accordion">
+		<h3>Heading 1</h3>
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem suscipit neque, et obcaecati non quisquam! Quas corporis recusandae laboriosam quo et, dignissimos accusamus quisquam eveniet illo vero nam numquam quia.</p>
+		</div>
+	
+		<h3>Heading 2</h3>
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus rem nemo modi itaque explicabo iste repellat nihil dolorum maxime, natus, quis nam laboriosam incidunt quam ea, illum suscipit quasi alias!</p>
+		</div>
+	
+		<h3>Heading 3</h3>
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic iusto voluptatibus repellendus iure aliquam, necessitatibus odio voluptates, adipisci obcaecati nemo rem esse facere et, praesentium dicta excepturi nostrum quod sequi!</p>
+		</div>
+	
+		<h3>Heading 4</h3>
+		<div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere corporis, quo nam debitis illo. Animi unde deserunt omnis amet quis odio, sit tempora reprehenderit veritatis vel similique, eveniet blanditiis dolor.</p>
+		</div>
+	</div>
+
+	<hr>
+	
+	<h2>Effect</h2>
+	<div class="effect bigbox">
+		<p class="animated-elt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum asperiores alias fugit, ipsa non quod, aut magnam dignissimos, expedita magni doloribus fuga. Veritatis eligendi neque dolores nesciunt. Laudantium, ratione, nemo.</p>
+		<button class="animate">Animate</button>
+	</div>
+
+	<hr>
+
+	<h2>Local Storage</h2>
+	<label for="team">Equipo: </label>
+	<input id="team" type="text" name="team">
+	<button id="addToLocal">Agregar</button>
+	<ul id="teams">
+		
+	</ul>
+
+</body>
+</html>
