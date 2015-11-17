@@ -1,0 +1,23 @@
+{
+  "name": "Chat",
+  "homepage": "https://github.com/edWAR6/PWI",
+  "authors": [
+    "Eduardo Oviedo Blanco <eduardo.oviedo@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.7",
+    "firebase": "~2.3.1",
+    "angularfire": "~1.1.3"
+  }
+}
