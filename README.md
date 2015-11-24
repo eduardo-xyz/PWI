@@ -1,2 +1,2 @@
-# DWI
-Desarrollo Web Interactivo
+# PWI
+Programación Web Interactiva
