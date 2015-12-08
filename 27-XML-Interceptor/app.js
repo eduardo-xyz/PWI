@@ -1,0 +1,1 @@
+angular.module('xml', ['xml.controllers', 'xml.services']);

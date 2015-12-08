@@ -1,0 +1,25 @@
+{
+  "name": "polymer-simple-slider",
+  "version": "0.2.0",
+  "description": "A Polymer element providing a simple slider functionality",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-bump": "~0.0.x"
+  },
+  "keywords": [
+    "web-components",
+    "element",
+    "carousel",
+    "simple-slider",
+    "slider",
+    "simple"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruyadorno/polymer-simple-slider"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "27-XML-Interceptor",
+  "homepage": "https://github.com/edWAR6/PWI",
+  "authors": [
+    "Eduardo Oviedo Blanco <eduardo.oviedo@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.8"
+  }
+}

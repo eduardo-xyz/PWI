@@ -1,24 +1,35 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $ionicListDelegate) {
-  $scope.items = [
-    {
-      name: 'arroz'
-    },
-    {
-      name: 'frijoles'
-    }
-  ];
+.controller('DashCtrl', function($scope, $ionicListDelegate, Shopping) {
+  $scope.items = Shopping.list;
 
   $scope.addItem = function(){
     var name = prompt('Name the new item.');
     if (name) {
-      $scope.item.push({
+      $scope.items.$add({
         name: name
       });
     };
   };  
+
+  $scope.purchaseItem = function(item){
+    Shopping.purchase(item.$id);
+    $ionicListDelegate.closeOptionButtons();
+  };
+
 })
+
+
+
+
+
+
+
+
+
+
+
+
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
