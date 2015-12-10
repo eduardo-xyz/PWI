@@ -1,30 +1,38 @@
-angular.module('xml.services', [])
+angular.module('xmlinterceptor.services', [])
+
+.run(function($http) {
+  // $http.defaults.headers.common.Accept = '*/*';
+  // delete $http.defaults.headers.common['Origin'];
+})
 
 .factory('$exchangerate', function($http){
   var compra;
   var venta;
 
   function getExchangeRate(type){
-    var url = 'http://indicadoreseconomicos.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx/ObtenerIndicadoresEconomicosXML';
-    var parameters;
+    var url = 'http://indicadoreseconomicos.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx/ObtenerIndicadoresEconomicos';
+    var request;
     if (type == 'compra') {
-      parameters = {
+      request = {
         url: url,
         method: 'GET',
         params: {
-          tcIndicador: '317',
+          tcIndicador: 317,
           tcFechaInicio: '07/12/2015',
           tcFechaFinal: '07/12/2015',
           tcNombre: 'Cenfotec',
           tnSubNiveles: 'No'
+        },
+        headers: {
+          'Content-Type': undefined
         }
       };
     }else{
-      parameters = {
+      request = {
         url: url,
         method: 'GET',
         params: {
-          tcIndicador: '318',
+          tcIndicador: 318,
           tcFechaInicio: '07/12/2015',
           tcFechaFinal: '07/12/2015',
           tcNombre: 'Cenfotec',
@@ -33,7 +41,7 @@ angular.module('xml.services', [])
       };
     };
 
-    $http(parameters).then(function(data){
+    $http(request).then(function(data){
       console.log(data);
 
     }, function(error){

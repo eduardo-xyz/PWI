@@ -1,4 +1,4 @@
-angular.module('xml.controllers', ['xml.services'])
+angular.module('xmlservice.controllers', [])
 
 .controller('xmlcontroller', function($scope, $exchangerate){
   $scope.compra = $exchangerate.compra;

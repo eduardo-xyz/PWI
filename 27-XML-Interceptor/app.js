@@ -1,1 +1,1 @@
-angular.module('xml', ['xml.controllers', 'xml.services']);
+var myApp = angular.module('xmlservice', ['xmlservice.controllers', 'xmlservice.services']);
