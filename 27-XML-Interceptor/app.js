@@ -1,1 +1,5 @@
-var myApp = angular.module('xmlservice', ['xmlservice.controllers', 'xmlservice.services']);
+var myApp = angular.module('xmlinterceptor', ['xmlinterceptor.controllers', 'xmlinterceptor.services', 'xml']);
+
+myApp.config(['$httpProvider', function($httpProvider){
+  $httpProvider.interceptors.push('xmlHttpInterceptor');
+}]);
