@@ -8,7 +8,7 @@ angular.module('angularmaps', ['ngRoute', 'angularmaps.controllers'])
 	    controller: 'HomeController'
 	})
 	.when('/maps', {
-	    templateUrl: 'views/map.html',
+	    templateUrl: 'views/maps.html',
 	    controller: 'MapsController'
 	})
 	.otherwise({
