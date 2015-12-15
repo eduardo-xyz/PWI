@@ -1,0 +1,21 @@
+{
+  "name": "31-Angular GM",
+  "homepage": "https://github.com/edWAR6/PWI",
+  "authors": [
+    "Eduardo Oviedo Blanco <eduardo.oviedo@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-google-maps": "~2.2.1"
+  }
+}
